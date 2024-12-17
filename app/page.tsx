@@ -6,16 +6,34 @@ export default function Home() {
   
   const images = [
     {
-      src: "/images/GrandlandGoGrand_2880x1235_LIT.avif",
-      alt: "First image"
+      desktop: {
+        src: "/images/GrandlandGoGrand_2880x1235_LIT.avif",
+        alt: "First image"
+      },
+      mobile: {
+        src: "/images/GrandlandGoGrand_750x1680_LIT.avif", // Mobilios versijos nuotrauka
+        alt: "First image"
+      }
     },
     {
-      src: "/images/LCV_21x9_LIT.avif",
-      alt: "Second image"
+      desktop: {
+        src: "/images/LCV_21x9_LIT.avif",
+        alt: "Second image"
+      },
+      mobile: {
+        src: "/images/LCV_750x1680_LIT.avif", // Mobilios versijos nuotrauka
+        alt: "Second image"
+      }
     },
     {
-      src: "/images/Zafira_21x9_LIT.avif",
-      alt: "Third image"
+      desktop: {
+        src: "/images/Zafira_21x9_LIT.avif",
+        alt: "Third image"
+      },
+      mobile: {
+        src: "/images/AstraST_750x1680_LIT.avif", // Mobilios versijos nuotrauka
+        alt: "Third image"
+      }
     }
   ];
   

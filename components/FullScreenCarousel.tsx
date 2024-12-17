@@ -6,8 +6,14 @@ import { Button } from "@nextui-org/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselImage {
-  src: string;
-  alt: string;
+  desktop: {
+    src: string;
+    alt: string;
+  };
+  mobile: {
+    src: string;
+    alt: string;
+  };
 }
 
 interface FullScreenCarouselProps {
@@ -18,24 +24,73 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [touchStart, setTouchStart] = React.useState<number | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
+  const [isPaused, setIsPaused] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+  const autoPlayInterval = React.useRef<NodeJS.Timeout | null>(null);
 
   const minSwipeDistance = 50;
 
+  // Ekrano dydžio stebėjimas
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Pradinis patikrinimas
+    checkMobile();
+
+    // Stebėjimas resize evento
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  // Automatinis keitimas
+  React.useEffect(() => {
+    const startAutoPlay = () => {
+      autoPlayInterval.current = setInterval(() => {
+        if (!isPaused) {
+          setCurrentIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          );
+        }
+      }, 2000);
+    };
+
+    startAutoPlay();
+
+    return () => {
+      if (autoPlayInterval.current) {
+        clearInterval(autoPlayInterval.current);
+      }
+    };
+  }, [isPaused, images.length]);
+
+  const pauseAutoPlay = () => setIsPaused(true);
+  const resumeAutoPlay = () => setIsPaused(false);
+
   const handlePrevious = (e: React.MouseEvent | React.TouchEvent) => {
-    e.stopPropagation(); // Sustabdome event bubble-up
+    e.stopPropagation();
+    pauseAutoPlay();
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+    setTimeout(resumeAutoPlay, 5000);
   };
 
   const handleNext = (e: React.MouseEvent | React.TouchEvent) => {
-    e.stopPropagation(); // Sustabdome event bubble-up
+    e.stopPropagation();
+    pauseAutoPlay();
     setCurrentIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
+    setTimeout(resumeAutoPlay, 5000);
   };
 
   const onTouchStart = (e: React.TouchEvent) => {
+    pauseAutoPlay();
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -57,17 +112,36 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
     if (isRightSwipe) {
       handlePrevious({ stopPropagation: () => {} } as React.TouchEvent);
     }
+    setTimeout(resumeAutoPlay, 5000);
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
+    pauseAutoPlay();
     if (e.key === 'ArrowLeft') {
       handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
     } else if (e.key === 'ArrowRight') {
       handleNext({ stopPropagation: () => {} } as React.MouseEvent);
     }
+    setTimeout(resumeAutoPlay, 5000);
   };
 
+  const handleDotClick = (index: number) => {
+    pauseAutoPlay();
+    setCurrentIndex(index);
+    setTimeout(resumeAutoPlay, 5000);
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (autoPlayInterval.current) {
+        clearInterval(autoPlayInterval.current);
+      }
+    };
+  }, []);
+
   if (!images || images.length === 0) return null;
+
+  const currentImage = isMobile ? images[currentIndex].mobile : images[currentIndex].desktop;
 
   return (
     <div 
@@ -76,12 +150,14 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
       onKeyDown={onKeyDown}
+      onMouseEnter={pauseAutoPlay}
+      onMouseLeave={resumeAutoPlay}
       tabIndex={0}
     >
       <div className="absolute inset-0">
         <Image
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
+          src={currentImage.src}
+          alt={currentImage.alt}
           fill
           className="object-contain"
           priority
@@ -91,7 +167,6 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
         />
       </div>
 
-      {/* Navigation Buttons su touch palaikymu */}
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <Button
           isIconOnly
@@ -116,7 +191,6 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
         </Button>
       </div>
 
-      {/* Dots Indicator su touch palaikymu */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
@@ -124,13 +198,10 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
             className={`w-2 h-2 rounded-full transition-all touch-manipulation ${
               index === currentIndex ? "bg-white w-4" : "bg-white/50"
             }`}
-            onClick={(e) => {
-              e.stopPropagation();
-              setCurrentIndex(index);
-            }}
+            onClick={() => handleDotClick(index)}
             onTouchEnd={(e) => {
               e.stopPropagation();
-              setCurrentIndex(index);
+              handleDotClick(index);
             }}
             aria-label={`Go to image ${index + 1}`}
           />
