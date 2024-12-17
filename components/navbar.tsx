@@ -103,7 +103,7 @@ export const Navbar = () => {
               href={siteConfig.links.contact}
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Bandomasis važiavimas
             </NextLink>
           </NavbarMenuItem>
         </div>
