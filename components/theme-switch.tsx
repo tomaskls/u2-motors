@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { FC } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
@@ -22,6 +23,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   const isSSR = useIsSSR();
 
   const onChange = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
