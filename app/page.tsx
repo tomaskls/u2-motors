@@ -7,14 +7,18 @@ export default function Home() {
   const images = [
     {
       src: "/images/GrandlandGoGrand_2880x1235_LIT.avif",
+      mobileSrc: "/images/GrandlandGoGrand_750x1680_LIT.avif", 
       alt: "First image"
     },
+    
     {
       src: "/images/LCV_21x9_LIT.avif",
+      mobileSrc: "/images/LCV_750x1680_LIT.avif", 
       alt: "Second image"
     },
     {
       src: "/images/Zafira_21x9_LIT.avif",
+      mobileSrc: "/images/AstraST_750x1680_LIT.avif", 
       alt: "Third image"
     }
   ];

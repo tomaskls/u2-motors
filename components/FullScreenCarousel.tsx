@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselImage {
   src: string;
+  mobileSrc: string;
   alt: string;
 }
 
@@ -16,6 +17,17 @@ interface FullScreenCarouselProps {
 
 const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => 
@@ -31,12 +43,15 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
 
   if (!images || images.length === 0) return null;
 
+  const currentImage = images[currentIndex];
+  const imageSrc = isMobile ? currentImage.mobileSrc : currentImage.src;
+
   return (
     <div className="relative w-full h-screen">
       <div className="absolute inset-0">
         <Image
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
+          src={imageSrc}
+          alt={currentImage.alt}
           fill
           className="object-contain"
           priority
