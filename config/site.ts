@@ -14,7 +14,7 @@ export const siteConfig = {
   navMenuItems: [
     { label: "Pagrindinis", href: "/" },
     { label: "Automobiliai", href: "/automobiliai" },
-    { label: "Savininkams", href: "/savininkams" },
+    { label: "Savininkams", href: "https://www.opel.lt/savininkams/myopel.html" },
     { label: "Servisas", href: "/servisas" },
     { label: "Kontaktai", href: "kontaktai" },
   ],
