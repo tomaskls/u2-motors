@@ -7,7 +7,11 @@ export const siteConfig = {
     { label: "Pagrindinis", href: "/" },
     { label: "Naujienos", href: "/naujienos" },
     { label: "Automobiliai", href: "/automobiliai" },
-    { label: "Savininkams", href: "https://www.opel.lt/savininkams/myopel.html" },
+    { 
+      label: "Savininkams", 
+      href: "https://www.opel.lt/savininkams/myopel.html",
+      isExternal: true 
+    },
     { label: "Servisas", href: "/servisas" },
     { label: "Kontaktai", href: "kontaktai" },
   ],
@@ -16,7 +20,11 @@ export const siteConfig = {
     { label: "Pagrindinis", href: "/" },
     { label: "Naujienos", href: "/naujienos" },
     { label: "Automobiliai", href: "/automobiliai" },
-    { label: "Savininkams", href: "https://www.opel.lt/savininkams/myopel.html" },
+    { 
+      label: "Savininkams", 
+      href: "https://www.opel.lt/savininkams/myopel.html",
+      isExternal: true 
+    },
     { label: "Servisas", href: "/servisas" },
     { label: "Kontaktai", href: "kontaktai" },
   ],

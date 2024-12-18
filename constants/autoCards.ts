@@ -1,6 +1,6 @@
 export const autocards = [
     {
-      imageUrl: "/images/2022-11-14.jpg",
+      imageUrl: "/images/automobiliai/spec.png",
       imageAlt: "Pirma kortelė",
       title: "Ypatingi Pasiūlymai",
       ctaUrl: "https://www.opel.lt/pasiulymai-paslaugos/ypatingi-pasiulymai.html"

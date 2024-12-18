@@ -11,7 +11,6 @@ import {
   NavbarMenuItem
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -46,6 +45,8 @@ export const Navbar = () => {
                 )}
                 color="foreground"
                 href={item.href}
+                target={item.isExternal ? "_blank" : undefined}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
               >
                 {item.label}
               </NextLink>
@@ -63,12 +64,12 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Button
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
+            as={NextLink}
             href={siteConfig.links.contact}
-            variant="flat"
+            color="primary"
+            variant="solid"
           >
-            Registracija i Servisą
+            Registracija į Servisą
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -88,6 +89,8 @@ export const Navbar = () => {
                   "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 href={item.href}
+                target={item.isExternal ? "_blank" : undefined}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -103,7 +106,7 @@ export const Navbar = () => {
               href={siteConfig.links.contact}
               onClick={() => setIsMenuOpen(false)}
             >
-              Registracija i Servisą
+              Registracija į Servisą
             </NextLink>
           </NavbarMenuItem>
         </div>

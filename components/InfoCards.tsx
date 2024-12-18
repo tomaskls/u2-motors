@@ -41,7 +41,7 @@ const InfoCards = ({ cards }: InfoCardsProps) => {
             <Button 
               as={Link}
               href={card.ctaUrl}
-              className=" bg-indigo-500 dark:bg-fuchsia-500 text-white hover:bg-indigo-600 dark:hover:bg-fuchsia-600"
+              color="primary"
             >
               Daugiau
             </Button>
