@@ -18,11 +18,11 @@ interface InfoCardsProps {
 
 const InfoCards = ({ cards }: InfoCardsProps) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-4">
+    <div className="flex flex-wrap gap-8 p-4 justify-center lg:justify-between">
       {cards.map((card, index) => (
-        <Card
-          key={index}
-          className="flex-1"
+        <Card 
+          key={index} 
+          className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] bg-white dark:bg-blue-950"
         >
           <CardHeader className="p-0">
             <div className="relative w-full h-48">
@@ -37,11 +37,11 @@ const InfoCards = ({ cards }: InfoCardsProps) => {
           <CardBody>
             <h2 className="text-2xl font-bold">{card.title}</h2>
           </CardBody>
-          <CardFooter>
-            <Button
-              className="w-full bg-indigo-500 dark:bg-fuchsia-500/50 text-white hover:bg-indigo-600 dark:hover:bg-fuchsia-600" as={Link}
+          <CardFooter className="flex justify-end">
+            <Button 
+              as={Link}
               href={card.ctaUrl}
-              variant="solid"
+              className=" bg-indigo-500 dark:bg-fuchsia-500 text-white hover:bg-indigo-600 dark:hover:bg-fuchsia-600"
             >
               Daugiau
             </Button>

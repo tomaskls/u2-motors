@@ -2,7 +2,7 @@ import React from "react";
 import FullScreenCarousel from "@/components/FullScreenCarousel";
 import InfoCards from "@/components/InfoCards";
 import { CAROUSEL_IMAGES } from "@/constants/carousel-images";
-import { INFO_CARDS } from "@/constants/info-cards";
+import { INFO_CARDS } from "@/constants/infoCards";
 
 export default function Home() {
   return (
