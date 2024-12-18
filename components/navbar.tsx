@@ -68,7 +68,7 @@ export const Navbar = () => {
             href={siteConfig.links.contact}
             variant="flat"
           >
-            Bandomasis Važiavimas
+            Registracija i Servisą
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -103,7 +103,7 @@ export const Navbar = () => {
               href={siteConfig.links.contact}
               onClick={() => setIsMenuOpen(false)}
             >
-              Bandomasis važiavimas
+              Registracija i Servisą
             </NextLink>
           </NavbarMenuItem>
         </div>
