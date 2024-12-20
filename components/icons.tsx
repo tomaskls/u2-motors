@@ -7,7 +7,7 @@ export  const U2LogoMain = () => {
   const { theme } = useTheme();
   
   return (
-    <div className="w-32 h-10 relative  mr-4">
+    <div className="w-32 h-10 relative  lg:mr-4">
       <Image
         src={theme === 'dark' ? '/logo/u2maindark.png' : '/logo/u2mainlight.png'}
         alt="U2 Motors Logo"
@@ -24,7 +24,7 @@ export  const Logo = () => {
   const { theme } = useTheme();
   
   return (
-    <div className="w-32 h-10 relative">
+    <div  className=" w-16 h-10 relative">
       <Image
         src={theme === 'dark' ? '/logo/OPEL_EMBLEM_2023_VERTICAL_WHITE_RGB.png' : '/logo/OPEL_EMBLEM_2023_VERTICAL_BLACK_RGB.png'}
         alt="Opel Logo"
