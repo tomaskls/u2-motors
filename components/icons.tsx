@@ -1,12 +1,13 @@
 import * as React from "react";
 import { useTheme } from 'next-themes';
 import Image from "next/image";
+import { IconSvgProps } from "@/types";
 
 export  const U2LogoMain = () => {
   const { theme } = useTheme();
   
   return (
-    <div className="w-32 h-10 relative ml-6 mr-4">
+    <div className="w-32 h-10 relative  mr-4">
       <Image
         src={theme === 'dark' ? '/logo/u2maindark.png' : '/logo/u2mainlight.png'}
         alt="U2 Motors Logo"
@@ -19,84 +20,25 @@ export  const U2LogoMain = () => {
 };
 
 
-
-
-
-
-import { IconSvgProps } from "@/types";
-
-// eslint-disable-next-line no-empty-pattern
-export const Logo: React.FC<IconSvgProps> = ({
- 
-}) => (
+export  const Logo = () => {
+  const { theme } = useTheme();
   
-   <svg xmlns="http://www.w3.org/2000/svg" width="62" height="47" viewBox="0 0 284.503 222.571"><path fill="#1a1a1a" d="M187.874 89.995l15.721-5.456-36.219 26.696-13.938 4.142z"/><path fill="#8c8c8c" d="M283.567 117.909l-8.838 4.436-121.291-6.968 13.938-4.142z"/><path fill="#1a1a1a" d="M274.573 131.547l-195 6.384 15.735-5.453 176.55-5.78z"/><path fill="#8c8c8c" d="M79.573 137.931l15.735-5.453 34.48-25.377-13.943 4.134z"/><path fill="#1a1a1a" d="M129.788 107.101l-13.943 4.134-114.91-6.674 8.834-4.431z"/><path fill="#8c8c8c" d="M9.93 90.922l2.714 4.849-2.875 4.359-8.834 4.431z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="9.93" y1="90.155" x2="203.595" y2="90.155"><stop offset="0" stopColor="#8c8c8c"/><stop offset="1" stopColor="#4d4d4d"/></linearGradient><path fill="url(#a)" d="M9.93 90.922l2.714 4.849 175.23-5.776 15.721-5.456"/><path fill="#1a1a1a" stroke="#f2f2f2" strokeWidth=".435" d="M167.376 111.235l-13.938 4.142 34.436-25.382"/><path fill="#8c8c8c" stroke="#f2f2f2" strokeWidth=".58" d="M283.567 117.909l-8.838 4.436-121.291-6.968"/><path fill="#1a1a1a" stroke="#f2f2f2" strokeWidth=".58" d="M79.573 137.931l15.735-5.453 176.55-5.78 2.715 4.849"/><path fill="#1a1a1a" d="M274.573 131.547l-2.715-4.849 2.871-4.353 8.838-4.436"/><path fill="#c2c2c2" stroke="#f2f2f2" strokeWidth=".435" d="M79.573 137.931l15.735-5.453 34.48-25.377-13.943 4.134"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="58.578" y1="41.029" x2="225.92" y2="181.445"><stop offset="0" stopColor="#e0e0e0"/><stop offset=".15" stopColor="#939393"/><stop offset=".17" stopColor="#9f9f9f"/><stop offset=".235" stopColor="#c1c1c1"/><stop offset=".302" stopColor="#dcdcdc"/><stop offset=".37" stopColor="#f0f0f0"/><stop offset=".439" stopColor="#fbfbfb"/><stop offset=".511" stopColor="#fff"/><stop offset=".576" stopColor="#fbfbfb"/><stop offset=".639" stopColor="#f0f0f0"/><stop offset=".701" stopColor="#dcdcdc"/><stop offset=".763" stopColor="#c1c1c1"/><stop offset=".824" stopColor="#9e9e9e"/><stop offset=".85" stopColor="#8c8c8c"/><stop offset="1" stopColor="#fafafa"/></linearGradient><path d="M12.644 95.771l-2.875 4.359 120.019 6.971-34.479 25.377 176.55-5.78 2.871-4.354-121.292-6.967 34.437-25.383-175.231 5.777z" fill="url(#b)"/><path fill="#1a1a1a" stroke="#f2f2f2" strokeWidth=".435" d="M.935 104.561l8.834-4.431 120.019 6.971-15.418 4.569"/><path fill="none" stroke="#f2f2f2" strokeWidth=".435" d="M9.93 90.922l2.714 4.849-2.875 4.359-8.834 4.431"/><path fill="none" stroke="#f2f2f2" strokeWidth=".435" d="M9.93 90.922l2.714 4.849 175.23-5.776 15.721-5.456"/><path d="M203.588 84.306L9.802 90.694.519 104.769l114.67 6.66-36.357 26.759 195.868-6.412 9.283-14.076-115.951-6.66 36.303-26.758-.747.024z" fill="none" stroke="#1a1a1a" strokeWidth=".58"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="31.299" y1="162.886" x2="251.314" y2="162.886"><stop offset=".006" stopColor="#1a1a1a"/><stop offset=".01" stopColor="#282828"/><stop offset=".029" stopColor="#5d5d5d"/><stop offset=".046" stopColor="#888"/><stop offset=".062" stopColor="#a6a6a6"/><stop offset=".075" stopColor="#b9b9b9"/><stop offset=".084" stopColor="#bfbfbf"/><stop offset=".143" stopColor="#999"/><stop offset=".208" stopColor="#777"/><stop offset=".28" stopColor="#5a5a5a"/><stop offset=".359" stopColor="#424242"/><stop offset=".449" stopColor="#303030"/><stop offset=".556" stopColor="#232323"/><stop offset=".696" stopColor="#1c1c1c"/><stop offset="1" stopColor="#1a1a1a"/></linearGradient><path d="M246.61 130.427c-2.796 15.38-9.045 30.367-18.928 43.777-34.693 47.079-101.221 57.155-148.3 22.462-30.389-22.395-45.36-58.053-42.826-93.182l-5.151 2.845c-1.562 35.706 14.116 71.514 45.049 94.309 49.35 36.366 118.836 25.842 155.201-23.507 10.141-13.761 16.635-29.087 19.658-44.823l-4.703-1.881z" fill="url(#c)"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="33.31" y1="60.012" x2="253.305" y2="60.012"><stop offset="0" stopColor="#e0e0e0"/><stop offset=".116" stopColor="#dbdbdb"/><stop offset=".26" stopColor="#ccc"/><stop offset=".42" stopColor="#b2b2b2"/><stop offset=".59" stopColor="#8f8f8f"/><stop offset=".767" stopColor="#626262"/><stop offset=".843" stopColor="#4d4d4d"/><stop offset="1" stopColor="#1a1a1a"/></linearGradient><path d="M253.202 116.165c1.537-35.68-14.143-71.454-45.055-94.233C158.8-14.435 89.314-3.911 52.948 45.438 42.831 59.167 36.343 74.453 33.311 90.151l4.555 2.703c2.732-15.629 9.021-30.872 19.056-44.488C91.614 1.287 158.142-8.79 205.22 25.904c30.578 22.534 45.547 58.497 42.777 93.837l5.205-3.576z" fill="url(#d)"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="36.25" y1="160.464" x2="246.585" y2="160.464"><stop offset="0" stopColor="#fff"/><stop offset="0" stopColor="#ececec"/><stop offset=".001" stopColor="#dbdbdb"/><stop offset=".002" stopColor="#d0d0d0"/><stop offset=".003" stopColor="#c9c9c9"/><stop offset=".006" stopColor="#c7c7c7"/><stop offset=".179" stopColor="#c9c9c9"/><stop offset=".28" stopColor="#d2d2d2"/><stop offset=".362" stopColor="#e0e0e0"/><stop offset=".434" stopColor="#f4f4f4"/><stop offset=".466" stopColor="#fff"/><stop offset=".642" stopColor="#fdfdfd"/><stop offset=".734" stopColor="#f5f5f5"/><stop offset=".807" stopColor="#e7e7e7"/><stop offset=".869" stopColor="#d4d4d4"/><stop offset=".925" stopColor="#bcbcbc"/><stop offset=".976" stopColor="#9d9d9d"/><stop offset="1" stopColor="#8c8c8c"/></linearGradient><path d="M239.77 130.999c-5.978 29.383-25.089 55.76-54.095 69.812-49.363 23.917-108.982 3.213-132.899-46.151-7.766-16.028-10.827-33.138-9.73-49.755l-6.503-1.314c-1.34 17.996 1.893 36.562 10.312 53.938 25.499 52.63 89.061 74.704 141.69 49.204 31.547-15.283 52.115-44.242 58.041-76.326l-6.816.592z" fill="url(#e)"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="63.698" y1="30.375" x2="248.03" y2="119.682"><stop offset=".006" stopColor="#c7c7c7"/><stop offset=".025" stopColor="#d2d2d2"/><stop offset=".055" stopColor="#ddd"/><stop offset=".09" stopColor="#e0e0e0"/><stop offset=".098" stopColor="#e9e9e9"/><stop offset=".117" stopColor="#f6f6f6"/><stop offset=".142" stopColor="#fdfdfd"/><stop offset=".197" stopColor="#fff"/><stop offset=".714" stopColor="#8c8c8c"/><stop offset="1" stopColor="#8c8c8c"/></linearGradient><path d="M248.003 119.738c1.488-18.231-1.717-37.077-10.254-54.696-25.498-52.63-89.061-74.703-141.691-49.204C64.287 31.23 43.652 60.494 37.895 92.851l6.588.532c5.55-30.105 24.845-57.282 54.444-71.623 49.366-23.917 108.984-3.213 132.9 46.151 7.965 16.438 10.98 34.014 9.639 51.03l6.537.797z" fill="url(#f)"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="241.781" y1="65.379" x2="44.429" y2="65.379"><stop offset="0" stopColor="#e0e0e0"/><stop offset=".001" stopColor="#e0e0e0"/><stop offset=".006" stopColor="#e0e0e0"/><stop offset=".183" stopColor="#c2c2c2"/><stop offset=".57" stopColor="#757575"/><stop offset="1" stopColor="#1a1a1a"/></linearGradient><path d="M241.489 118.952c.193-2.53.292-5.087.292-7.667 0-54.853-44.626-99.479-99.48-99.479-48.755 0-89.431 35.256-97.872 81.613l5.839-3.826c9.83-41.711 47.363-72.852 92.033-72.852 52.132 0 94.545 42.413 94.545 94.544a96.5 96.5 0 0 1-.163 5.582l4.806 2.085z" fill="url(#g)"/><linearGradient id="h" gradientUnits="userSpaceOnUse" x1="239.825" y1="157.83" x2="42.822" y2="157.83"><stop offset="0" stopColor="#1a1a1a"/><stop offset=".017" stopColor="#303030"/><stop offset=".061" stopColor="#656565"/><stop offset=".104" stopColor="#929292"/><stop offset=".146" stopColor="#b4b4b4"/><stop offset=".185" stopColor="#ccc"/><stop offset=".221" stopColor="#dbdbdb"/><stop offset=".25" stopColor="#e0e0e0"/><stop offset=".36" stopColor="#ddd"/><stop offset=".467" stopColor="#d1d1d1"/><stop offset=".572" stopColor="#bdbdbd"/><stop offset=".677" stopColor="#a2a2a2"/><stop offset=".781" stopColor="#7e7e7e"/><stop offset=".885" stopColor="#535353"/><stop offset=".987" stopColor="#212121"/><stop offset="1" stopColor="#1a1a1a"/></linearGradient><path d="M234.313 133.069c-9.863 41.666-47.375 72.761-92.012 72.761-52.131 0-94.544-42.413-94.544-94.544 0-1.509.036-3.009.106-4.501l-4.838-1.888a100.929 100.929 0 0 0-.203 6.389c0 54.854 44.626 99.479 99.479 99.479 48.116 0 88.362-34.336 97.524-79.791l-5.512 2.095z" fill="url(#h)"/><path d="M248.03 119.718c.219-2.782.332-5.595.332-8.433 0-58.481-47.578-106.06-106.061-106.06-52.193 0-95.701 37.896-104.455 87.618M36.519 103.584a106.72 106.72 0 0 0-.277 7.701c0 58.482 47.578 106.06 106.06 106.06 51.946 0 95.29-37.537 104.329-86.911" fill="none" stroke="#f2f2f2" strokeWidth=".58"/><path d="M44.428 93.426c8.438-46.36 49.116-81.62 97.874-81.62 54.854 0 99.48 44.626 99.48 99.479 0 2.58-.099 5.136-.292 7.667" fill="none" stroke="#f2f2f2" strokeWidth=".58" strokeLinecap="square" strokeLinejoin="bevel"/><path d="M43.023 104.917a101.026 101.026 0 0 0-.201 6.369c0 54.854 44.626 99.479 99.479 99.479 48.108 0 88.349-34.324 97.52-79.77" fill="none" stroke="#f2f2f2" strokeWidth=".58"/><path d="M31.405 106.33l5.151-2.845 6.489 1.42 4.816 1.912a95.948 95.948 0 0 0-.104 4.468c0 52.131 42.413 94.544 94.544 94.544 44.592 0 82.073-31.031 91.981-72.633l5.539-2.202 6.809-.561 4.684 1.875" fill="none" stroke="#1a1a1a" strokeWidth=".58"/><path d="M251.282 132.45c-9.881 51.178-54.916 89.831-108.981 89.831-61.3 0-110.995-49.694-110.995-110.996 0-1.582.033-3.157.099-4.722" fill="none" stroke="#1a1a1a" strokeWidth=".58" strokeLinecap="square"/><path fill="none" stroke="#f2f2f2" strokeWidth=".435" d="M236.519 116.604l4.806 2.38 6.672.757 5.293-3.8"/><path d="M236.775 114.964c-.024.646-.056 1.29-.095 1.933" fill="none" stroke="#1a1a1a" strokeWidth=".58"/><path fill="none" stroke="#f2f2f2" strokeWidth=".435" strokeLinecap="square" strokeLinejoin="bevel" d="M50.229 89.517l-5.616 4.085-6.766-.759-4.486-2.926"/><path d="M50.269 89.593c9.83-41.712 47.363-72.852 92.033-72.852 52.132 0 94.545 42.413 94.545 94.544 0 1.232-.024 2.458-.071 3.679" fill="none" stroke="#1a1a1a" strokeWidth=".58"/><path d="M33.361 89.917C43.322 38.84 88.31.29 142.301.29c61.301 0 110.997 49.694 110.997 110.995 0 1.557-.033 3.106-.096 4.646" fill="none" stroke="#1a1a1a" strokeWidth=".58" strokeLinecap="square"/></svg>
-);
-
-export const DiscordIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
   return (
-    <svg
-      height={size || height}
-      viewBox="0 0 24 24"
-      width={size || width}
-      {...props}
-    >
-      <path
-        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z"
-        fill="currentColor"
+    <div className="w-32 h-10 relative">
+      <Image
+        src={theme === 'dark' ? '/logo/OPEL_EMBLEM_2023_VERTICAL_WHITE_RGB.png' : '/logo/OPEL_EMBLEM_2023_VERTICAL_BLACK_RGB.png'}
+        alt="Opel Logo"
+        fill
+        className="object-contain"
+        priority
       />
-    </svg>
+    </div>
   );
 };
 
-export const TwitterIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
-  return (
-    <svg
-      height={size || height}
-      viewBox="0 0 24 24"
-      width={size || width}
-      {...props}
-    >
-      <path
-        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-};
 
-export const GithubIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
-  return (
-    <svg
-      height={size || height}
-      viewBox="0 0 24 24"
-      width={size || width}
-      {...props}
-    >
-      <path
-        clipRule="evenodd"
-        d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
-  );
-};
+
+
 
 export const MoonFilledIcon = ({
   size = 24,

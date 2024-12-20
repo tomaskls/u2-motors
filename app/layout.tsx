@@ -22,11 +22,10 @@ export const metadata: Metadata = {
   authors: [{ name: "U2 Motors" }],
   creator: "U2 Motors",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/OPEL-EMBLEM-2023-VERTICAL-BLACK-RGB.svg",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "lt_LT",
@@ -37,32 +36,11 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage || "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        width: 1320,
+        height: 370,
         alt: siteConfig.name,
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage || "/og-image.jpg"],
-    creator: "@u2motors",
-  },
-  verification: {
-    google: "jūsų_google_verification_kodas",
-  },
-  alternates: {
-    canonical: siteConfig.url,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
   },
 };
 export const viewport: Viewport = {
