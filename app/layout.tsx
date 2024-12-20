@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/og-image.jpg`,  // Jūsų OG paveiksliukas
+        url: `${siteConfig.url}/logo/u2meta.jpg`,  // Jūsų OG paveiksliukas
         width: 1200,
         height: 450,
         alt: siteConfig.name,
