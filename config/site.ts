@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   name: "U2 Motors | Opel",
   description: "U2 Motors - oficialus Opel atstovas Šiauliuose. Profesionalus automobilių servisas, originalios dalys, nauji ir naudoti automobiliai. Opel pardavimas ir aptarnavimas.",
   url: "https://www.u2motors.lt",
-  ogImage: "https://u2-motors.vercel.app/logo/u2meta.jpg", // čia reikės pridėti jūsų OG paveiksliuką
+  ogImage: "https://u2-motors.vercel.app/logo/u2meta.png", // čia reikės pridėti jūsų OG paveiksliuką
   navItems: [
     { label: "Pagrindinis", href: "/" },
     { label: "Naujienos", href: "/naujienos" },
