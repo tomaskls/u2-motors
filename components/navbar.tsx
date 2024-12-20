@@ -16,6 +16,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
+import { U2LogoMain } from "@/components/icons"; // Įtraukiame naują komponentą
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
@@ -32,7 +33,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit dark:text-white ml-2">U2 Motors</p>
+            <U2LogoMain /> {/* Pakeičiame <p> elementą į U2Logo komponentą */}
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-6">
@@ -41,7 +42,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold",
                 )}
                 color="foreground"
                 href={item.href}

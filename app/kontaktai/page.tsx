@@ -26,14 +26,7 @@ export default function ContactPage() {
         </div>
 
         <div className="grid gap-6 order-1 lg:order-2">
-          <Card className="bg-white dark:bg-blue-950">
-            <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
-              <h2 className="text-xl font-bold">Mūsų adresas</h2>
-            </CardHeader>
-            <CardBody className="py-4">
-              <p>Serbentų g. 55, LT-77124 Šiauliai</p>
-            </CardBody>
-          </Card>
+          
 
           {contactSections.map((section, index) => (
             <Card key={index} className="bg-white dark:bg-blue-950">
@@ -75,6 +68,15 @@ export default function ContactPage() {
               </div>
             </CardBody>
           </Card>
+          <Card className="bg-white dark:bg-blue-950">
+            <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
+              <h2 className="text-xl font-bold">Mūsų adresas</h2>
+            </CardHeader>
+            <CardBody className="py-4">
+              <p>Serbentų g. 55, LT-77124 Šiauliai</p>
+            </CardBody>
+          </Card>
+
         </div>
       </div>
     </div>

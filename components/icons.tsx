@@ -1,4 +1,27 @@
 import * as React from "react";
+import { useTheme } from 'next-themes';
+import Image from "next/image";
+
+export  const U2LogoMain = () => {
+  const { theme } = useTheme();
+  
+  return (
+    <div className="w-32 h-10 relative ml-6 mr-4">
+      <Image
+        src={theme === 'dark' ? '/logo/u2maindark.png' : '/logo/u2mainlight.png'}
+        alt="U2 Motors Logo"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  );
+};
+
+
+
+
+
 
 import { IconSvgProps } from "@/types";
 

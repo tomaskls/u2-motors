@@ -1,11 +1,11 @@
 export const contactSections = [
     {
-      title: "Naujų automobilių pardavimų salonas",
+      title: "Automobilių pardavimų salonas",
       email: "Salonas@U2Motors.lt",
       phones: ["+370 698 45687"]
     },
     {
-      title: "Autoservisas, Plovykla",
+      title: "Autoservisas",
       email: "Servisas@U2Motors.lt",
       phones: ["+370 41 540011", "+370 686 77855"]
     },
@@ -20,6 +20,10 @@ export const contactSections = [
     {
       days: "I-IV",
       hours: "8:00 iki 18 val."
+    },
+    {
+      days: "V",
+      hours: "8:00 iki 17 val."
     },
     {
       days: "VI ir VII",

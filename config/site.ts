@@ -1,8 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "U2 Motors",
-  description: "Opel atstovybe ir servisas",
+  name: "U2 Motors | Opel",
+  description: "cia reikia parasyt ka nori",
+  url: "https://www.u2motors.lt/",
   navItems: [
     { label: "Pagrindinis", href: "/" },
     { label: "Naujienos", href: "/naujienos" },

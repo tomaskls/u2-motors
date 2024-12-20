@@ -20,44 +20,34 @@ export default function ContactPage() {
 
           {/* Aprašymas */}
           <div className="prose dark:prose-invert max-w-none">
-            <h2 className="text-2xl font-bold mb-4">Veiklos aprašymas</h2>
-            
-            <ul className="mb-6 list-disc pl-5 space-y-1">
-              <li>Automobilių remontas, autoservisas</li>
-              <li>Visos OPEL teikiamos paslaugos</li>
-              <li>OPEL automobilių visa naujausia diagnostika</li>
-            </ul>
+            <h2 className="text-2xl font-bold mb-4">MINAUTA, UAB (U2 Motors)</h2>
+
 
             <p>
-              U2 Motors, UAB Minauta specializuojasi  OPEL  markės 
-              automobilių remontu. Galime pasiūlyti įsigyti naujus bei naudotus 
-              OPEL markės automobilius.
+              MINAUTA, UAB yra oficialus„Opel” atstovas.
+            </p>
+            <p>
+              Įmonė dirba pagal gamintojo keliamus reikalavimus ir standartus automobilių bei atsarginių dalių ir aksesuarų prekybai, automobilių priežiūros bei serviso paslaugoms.
             </p>
 
             <p>
-              Serviso kolektyvas - profesionalūs autoremontininkai, vadybininkai - 
-              savo srities specialistai, operatyviai sprendžiantys iškilusias 
-              klientų autotransporto priemonių problemas.
+              Serviso kolektyvas - profesionalūs autoremontininkai, vadybininkai - savo srities specialistai, operatyviai sprendžiantys iškilusias klientų autotransporto priemonių problemas.Remonto darbai atliekami po išsamios techninio gedimo situacijos analizės.
             </p>
 
             <p>
-              Remonto darbai atliekami po išsamios techninio gedimo situacijos 
-              analizės, specialistų konsultacijos ir tik gavus kliento sutikimą. 
-              Dirbama su šiuolaikiška diagnostikos aparatūra.
+              Mūsų autoservise laikomasi „kaina - kokybė&quot; aptarnavimo standarto. Esame tam, kad rastume alternatyvius ir patikimus sprendimo būdus!
             </p>
 
             <p>
-              Tai leidžia pilnai išanalizuoti autotransporto priemonės gedimo 
-              problemas, jas įvertinti ir pateikti kvalifikuotus techninių 
-              problemų sprendimo būdus.
+              Vertybės (galima šiuos pabrėžti)
+              Taktiškas ir pagarbus klientų aptarnavimas
+              Siekiame maksimaliai patenkinti kliento poreikius.
             </p>
 
             <p>
-              Mūsų autoservise laikomasi „kaina - kokybė&quot; aptarnavimo standarto. 
-              Esame tam, kad rastume alternatyvius ir patikimus sprendimo būdus!
+              Pasitikėjimas ir sąžiningumas
+              Kuriame ryšius su klientais ir partneriais, grįstus korektiškumu, skaidrumu ir pagarba.
             </p>
-
-            <p className="font-semibold">„VIBER LES AUTOS&quot;</p>
           </div>
         </div>
 

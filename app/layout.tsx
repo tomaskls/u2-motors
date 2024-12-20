@@ -19,6 +19,22 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    type: "website",
+    locale: "lt_LT",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.jpg`,  // Jūsų OG paveiksliukas
+        width: 1200,
+        height: 450,
+        alt: siteConfig.name,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
