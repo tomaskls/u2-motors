@@ -1,22 +1,13 @@
 'use client'
-
 import React from "react";
-import { 
-  Navbar as NextUINavbar, 
-  NavbarContent, 
-  NavbarMenu, 
-  NavbarMenuToggle, 
-  NavbarBrand,
-  NavbarItem, 
-  NavbarMenuItem
-} from "@nextui-org/navbar";
+import { Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { Logo } from "@/components/icons";
-import { U2LogoMain } from "@/components/icons"; // Įtraukiame naują komponentą
+import { U2LogoMain } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
@@ -33,7 +24,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <U2LogoMain /> {/* Pakeičiame <p> elementą į U2Logo komponentą */}
+            <U2LogoMain />
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-6">
@@ -75,7 +66,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="lg:hidden basis-1 mr-1 pl-4" justify="end">
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>

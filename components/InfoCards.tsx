@@ -22,7 +22,7 @@ const InfoCardComponent = ({ card }: { card: InfoCard }) => (
       <h2 className="text-2xl font-bold">{card.title}</h2>
     </CardBody>
     <CardFooter className="flex justify-end">
-      <Button 
+      <Button
         as={Link}
         href={card.ctaUrl}
         color="primary"
@@ -75,7 +75,7 @@ const MixedCards = ({ cards }: MixedCardsProps) => {
       </div>
 
       {/* Mobile Layout */}
-      <div className="lg:hidden flex flex-col gap-8 p-4">
+      <div className="lg:hidden flex flex-col gap-8 ">
         {cards.map((card) => (
           <div key={card.id}>
             {renderCard(card)}

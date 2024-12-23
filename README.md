@@ -1,53 +1,46 @@
-# Next.js & NextUI Template
+# U2 Motors  Official Website
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+This project serves as the official website for the Opel dealership in Šiauliai, Lithuania. The platform provides comprehensive information about Opel vehicles, service center operations, and automotive services in the Šiauliai region.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## Project Goals
+- Present detailed information about Opel vehicle models and their specifications
+- Enable customers to explore service center offerings and pricing
+- Facilitate efficient communication between customers and the dealership
+- Deliver latest news and special offers
+- Ensure responsive design for both desktop and mobile devices
 
-## Technologies Used
+## Technologies
+The website is built using modern tools and technologies:
+- Next.js 15.0.4 - fast and SEO-optimized React framework
+- NextUI - modern component library
+- TypeScript - ensures code quality and maintainability
+- Tailwind CSS - flexible styling solution
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Use
+## Project Structure and Functionality
+- Homepage featuring news and promotions
+- Vehicle catalog with detailed descriptions
+- Service center offerings and pricing
+- Contact form and location map
+- Administration panel for staff
 
-### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## Features
+- Responsive design
+- Server-side rendering
+- SEO optimization
+- Modern UI components
+- TypeScript support
+- Dark/Light mode
+- Performance optimization
+- Browser compatibility
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
 
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## Author
+Tomas: [Github](https://github.com/tomaskls/)
 
 ## License
+This project is the property of the author and cannot be used, copied, modified, or distributed without the explicit written permission of the author. All rights reserved.
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+## Contact
+[Contact information for support and inquiries]

@@ -2,22 +2,15 @@ import React from "react";
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-
 import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+
+  title: "U2 Motors | Opel",
+  description: "U2 Motors - oficialus Opel atstovas Šiauliuose. Profesionalus automobilių servisas, originalios dalys, nauji ir naudoti automobiliai. Opel pardavimas ir aptarnavimas.",
   keywords: ["Opel", "U2 Motors", "Automobilių servisas", "Opel Šiauliai", "Automobilių pardavimas", "Opel pardavimas", "Automobilių remontas"],
   authors: [{ name: "U2 Motors" }],
   creator: "U2 Motors",
@@ -29,16 +22,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "lt_LT",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: "https://www.u2motors.lt",
+    title: "U2 Motors | Opel",
+    description: "U2 Motors - oficialus Opel atstovas Šiauliuose. Profesionalus automobilių servisas, originalios dalys, nauji ir naudoti automobiliai. Opel pardavimas ir aptarnavimas.",
+    siteName: "U2 Motors | Opel",
     images: [
       {
-        url: siteConfig.ogImage ,
-        width: 1320,
-        height: 370,
-        alt: siteConfig.name,
+        url: "https://u2-motors.vercel.app/logo/u2meta.png",
+        width: 1200,
+        height: 430,
+        alt: "U2 Motors | Opel",
       },
     ],
   },
@@ -71,7 +64,7 @@ export default function RootLayout({
               {children}
             </main>
             <footer>
-           <Footer />
+              <Footer />
             </footer>
           </div>
         </Providers>

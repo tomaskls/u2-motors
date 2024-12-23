@@ -1,5 +1,6 @@
 import React from "react";
-export default function AboutLayout({
+
+export default function AutoLayout({
   children,
 }: {
   children: React.ReactNode;

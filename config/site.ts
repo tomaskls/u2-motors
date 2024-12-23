@@ -5,10 +5,6 @@ export type NavItem = {
 };
 
 export type SiteConfig = {
-  name: string;
-  description: string;
-  url: string;
-  ogImage: string;
   navItems: NavItem[];
   navMenuItems: NavItem[];
   links: {
@@ -17,36 +13,42 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "U2 Motors | Opel",
-  description: "U2 Motors - oficialus Opel atstovas Šiauliuose. Profesionalus automobilių servisas, originalios dalys, nauji ir naudoti automobiliai. Opel pardavimas ir aptarnavimas.",
-  url: "https://www.u2motors.lt",
-  ogImage: "https://u2-motors.vercel.app/logo/u2meta.png", // čia reikės pridėti jūsų OG paveiksliuką
   navItems: [
     { label: "Pagrindinis", href: "/" },
-    { label: "Naujienos", href: "/naujienos" },
+
+    {
+      label: "Naujienos",
+      href: "https://www.opel.lt/experience-opel/opel-naujienos.html",
+      isExternal: true,
+    },
+
     { label: "Automobiliai", href: "/automobiliai" },
-    { 
-      label: "Savininkams", 
+    {
+      label: "Savininkams",
       href: "https://www.opel.lt/savininkams/myopel.html",
-      isExternal: true 
+      isExternal: true,
     },
     { label: "Servisas", href: "/servisas" },
     { label: "Kontaktai", href: "kontaktai" },
   ],
-  
+
   navMenuItems: [
     { label: "Pagrindinis", href: "/" },
-    { label: "Naujienos", href: "/naujienos" },
+    {
+      label: "Naujienos",
+      href: "https://www.opel.lt/experience-opel/opel-naujienos.html",
+      isExternal: true,
+    },
     { label: "Automobiliai", href: "/automobiliai" },
-    { 
-      label: "Savininkams", 
+    {
+      label: "Savininkams",
       href: "https://www.opel.lt/savininkams/myopel.html",
-      isExternal: true 
+      isExternal: true,
     },
     { label: "Servisas", href: "/servisas" },
     { label: "Kontaktai", href: "kontaktai" },
   ],
   links: {
-    contact: "/registracija"
+    contact: "/registracija",
   },
 };

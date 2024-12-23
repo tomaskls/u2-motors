@@ -1,5 +1,4 @@
 'use client'
-
 import React from "react";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
@@ -74,7 +73,7 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const handlePrevious = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
     pauseAutoPlay();
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
     setTimeout(resumeAutoPlay, 5000);
@@ -83,7 +82,7 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const handleNext = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
     pauseAutoPlay();
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
     setTimeout(resumeAutoPlay, 5000);
@@ -101,16 +100,16 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      handleNext({ stopPropagation: () => {} } as React.TouchEvent);
+      handleNext({ stopPropagation: () => { } } as React.TouchEvent);
     }
     if (isRightSwipe) {
-      handlePrevious({ stopPropagation: () => {} } as React.TouchEvent);
+      handlePrevious({ stopPropagation: () => { } } as React.TouchEvent);
     }
     setTimeout(resumeAutoPlay, 5000);
   };
@@ -118,9 +117,9 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const onKeyDown = (e: React.KeyboardEvent) => {
     pauseAutoPlay();
     if (e.key === 'ArrowLeft') {
-      handlePrevious({ stopPropagation: () => {} } as React.MouseEvent);
+      handlePrevious({ stopPropagation: () => { } } as React.MouseEvent);
     } else if (e.key === 'ArrowRight') {
-      handleNext({ stopPropagation: () => {} } as React.MouseEvent);
+      handleNext({ stopPropagation: () => { } } as React.MouseEvent);
     }
     setTimeout(resumeAutoPlay, 5000);
   };
@@ -144,7 +143,7 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const currentImage = isMobile ? images[currentIndex].mobile : images[currentIndex].desktop;
 
   return (
-    <div 
+    <div
       className="relative w-full h-screen"
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
@@ -190,14 +189,12 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
           <ChevronRight className="sm:w-6 sm:h-6 w-4 h-4" />
         </Button>
       </div>
-
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 rounded-full transition-all touch-manipulation ${
-              index === currentIndex ? "bg-white w-4" : "bg-white/50"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all touch-manipulation ${index === currentIndex ? "bg-white w-4" : "bg-white/50"
+              }`}
             onClick={() => handleDotClick(index)}
             onTouchEnd={(e) => {
               e.stopPropagation();
