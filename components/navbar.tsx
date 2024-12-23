@@ -6,7 +6,7 @@ import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {OpelLogo} from  "@/components/OpelLogo"
+import {OpelLogo} from  "@/components/OpelLogo";
 import { U2LogoMain } from "@/components/U2LogoMain";
 import { siteConfig } from "@/config/site";
 
