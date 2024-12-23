@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 import { Textarea } from "@nextui-org/input";
 import { Select, SelectItem } from "@nextui-org/select";
 
-const WEB3FORMS_KEY = '0c620e20-3f6a-4305-91ab-be60ec2e9e9a';
+const WEB3FORMS_KEY = '9cdfe2c8-8677-4c0c-aded-2510ae6d7d40';
 
 const DEFAULT_FORM_VALUES = {
   name: '',
