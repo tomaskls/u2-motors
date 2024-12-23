@@ -56,7 +56,7 @@ const VideoCardComponent = ({ card }: { card: VideoCard }) => {
                 <Button
                   isIconOnly
                   className="bg-red-600 text-white hover:bg-red-700 w-16 h-16"
-                  onClick={() => setShowVideo(true)}
+                  onPress={() => setShowVideo(true)}
                   aria-label="Play video"
                 >
                   <Play className="w-8 h-8" />
