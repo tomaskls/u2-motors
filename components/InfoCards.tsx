@@ -14,6 +14,7 @@ const InfoCardComponent = ({ card }: { card: InfoCard }) => (
           src={card.imageUrl}
           alt={card.imageAlt}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
         />
       </div>

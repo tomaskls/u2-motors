@@ -1,58 +1,5 @@
 import * as React from "react";
-import { useTheme } from 'next-themes';
-import Image from "next/image";
 import { IconSvgProps } from "@/types";
-import { useState, useEffect } from 'react';
-
-export const U2LogoMain = () => {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const logoSrc = mounted && theme === 'dark'
-    ? '/logo/u2maindark.png'
-    : '/logo/u2mainlight.png';
-
-  return (
-    <div className="w-32 h-10 relative lg:mr-4">
-      <Image
-        src={logoSrc}
-        alt="U2 Motors Logo"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
-  );
-};
-
-export const Logo = () => {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const logoSrc = mounted && theme === 'dark'
-    ? '/logo/OPEL_EMBLEM_2023_VERTICAL_WHITE_RGB.png'
-    : '/logo/OPEL_EMBLEM_2023_VERTICAL_BLACK_RGB.png';
-
-  return (
-    <div className="w-16 h-10 relative">
-      <Image
-        src={logoSrc}
-        alt="Opel Logo"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
-  );
-};
 
 export const MoonFilledIcon = ({
   size = 24,

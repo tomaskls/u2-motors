@@ -6,8 +6,8 @@ import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
-import { U2LogoMain } from "@/components/icons";
+import {OpelLogo} from  "@/components/OpelLogo"
+import { U2LogoMain } from "@/components/U2LogoMain";
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
@@ -23,7 +23,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
+            <OpelLogo />
             <U2LogoMain />
           </NextLink>
         </NavbarBrand>

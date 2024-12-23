@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <FullScreenCarousel images={CAROUSEL_IMAGES} />
-      <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+      <div className="container mx-auto max-w-7xl pt-16 px-4 lg:px-6 flex-grow">
       <MixedCards cards={cardsData} />
       </div>
     </>
