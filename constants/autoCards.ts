@@ -1,6 +1,6 @@
 export const autocards = [
     {
-      imageUrl: "/images/automobiliai/spec.png",
+      imageUrl: "/images/automobiliai/spec.webp",
       imageAlt: "Pirma kortelė",
       title: "Ypatingi Pasiūlymai",
       ctaUrl: "https://www.opel.lt/pasiulymai-paslaugos/ypatingi-pasiulymai.html"
@@ -25,7 +25,7 @@ export const autocards = [
     },
     
     {
-      imageUrl: "/images/automobiliai/opel_mokka-e_exterior_charging_21x9_mok21_e01_015.png",
+      imageUrl: "/images/automobiliai/opel_mokka-e.webp",
       imageAlt: "Trečia kortelė",
       title: "E-Mobilumas",
       ctaUrl: "https://www.opel.lt/simply-electric/overview.html"

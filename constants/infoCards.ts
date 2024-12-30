@@ -4,7 +4,7 @@ export const cardsData: CardItem[] = [
   {
     id: "1",
     variant: "info",
-    imageUrl: "/images/automobiliai/spec.png",
+    imageUrl: "/images/automobiliai/spec.webp",
     imageAlt: "Pirma kortelė",
     title: "Naujienos",
     ctaUrl: "https://www.opel.lt/experience-opel/opel-naujienos.html",
@@ -14,7 +14,7 @@ export const cardsData: CardItem[] = [
     id: "2",
     variant: "info",
     imageUrl:
-      "/images/automobiliai/opel_mokka-e_exterior_charging_21x9_mok21_e01_015.png",
+      "/images/automobiliai/opel_mokka-e.webp",
     imageAlt: "Antra kortelė",
     title: "Automobiliai",
     ctaUrl: "/automobiliai",
