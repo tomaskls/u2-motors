@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['img.youtube.com'], // pridedame YouTube thumbnail domeną
-      },
+  images: {
+      remotePatterns: [
+          {
+              protocol: 'https',
+              hostname: 'img.youtube.com',
+              port: '',
+              pathname: '/**',
+          },
+      ],
+  },
 };
 
 module.exports = nextConfig;
