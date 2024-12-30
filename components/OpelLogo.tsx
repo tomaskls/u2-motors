@@ -15,19 +15,20 @@ export const OpelLogo: FC<U2LogoMainProps> = ({
 }) => {
   const { theme } = useTheme();
   const isSSR = useIsSSR();
-
-  const isLight = theme === "light" || isSSR;
+  
+  // Naudojame tą pačią logiką kaip ThemeSwitch
+  const isSelected = theme === "light" || isSSR;
 
   return (
     <div
       className={clsx(
-        "w-16 h-10 relative ",
+        "w-16 h-10 relative",
         className,
       )}
     >
-      {isLight ? (
+      {!isSelected ? (
         <Image
-          src="/logo/OPEL_EMBLEM_2023_VERTICAL_BLACK_RGB.png"
+          src="/logo/OPEL_EMBLEM_2023_VERTICAL_WHITE_RGB.png"
           alt="Opel Logo"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -36,7 +37,7 @@ export const OpelLogo: FC<U2LogoMainProps> = ({
         />
       ) : (
         <Image
-          src="/logo/OPEL_EMBLEM_2023_VERTICAL_WHITE_RGB.png"
+          src="/logo/OPEL_EMBLEM_2023_VERTICAL_BLACK_RGB.png"
           alt="Opel Logo"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
