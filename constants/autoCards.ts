@@ -18,7 +18,7 @@ export const autocards = [
       ctaUrl: "https://www.opel.lt/furgonai/vanai-ir-kita/vanai-ir-kita.html"
     },
     {
-      imageUrl: "/images/2022-11-14.jpg",
+      imageUrl: "/images/opel_atstovai.webp",
       imageAlt: "Trečia kortelė",
       title: "Automobiliai Salone",
       ctaUrl: "https://autoplius.lt/u2motors/skelbimai/automobiliai"
