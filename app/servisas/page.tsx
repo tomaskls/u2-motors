@@ -9,7 +9,7 @@ export default function ServicePage() {
         <div className="space-y-6">
           <div className="relative aspect-video max-w-md rounded-lg overflow-hidden mb-14">
             <Image
-              src="/images/2022-07-18.jpg"
+              src="/images/u2_autoservisas.webp"
               alt="Autocentras"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
