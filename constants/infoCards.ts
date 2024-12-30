@@ -7,7 +7,8 @@ export const cardsData: CardItem[] = [
     imageUrl: "/images/automobiliai/spec.png",
     imageAlt: "Pirma kortelė",
     title: "Naujienos",
-    ctaUrl: "/naujienos",
+    ctaUrl: "https://www.opel.lt/experience-opel/opel-naujienos.html",
+    isExternal: true,
   },
   {
     id: "2",

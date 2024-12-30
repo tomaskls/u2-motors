@@ -7,33 +7,40 @@ import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { CardItem, InfoCard, VideoCard } from "@/types/cards";
 import { Play } from "lucide-react";
 
-const InfoCardComponent = ({ card }: { card: InfoCard }) => (
-  <Card className="w-full bg-white dark:bg-blue-950">
-    <CardHeader className="p-0">
-      <div className="relative w-full h-48">
-        <Image
-          src={card.imageUrl}
-          alt={card.imageAlt}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
-        />
-      </div>
-    </CardHeader>
-    <CardBody>
-      <h2 className="text-2xl font-bold">{card.title}</h2>
-    </CardBody>
-    <CardFooter className="flex justify-end">
-      <Button
-        as={Link}
-        href={card.ctaUrl}
-        color="primary"
-      >
-        Daugiau
-      </Button>
-    </CardFooter>
-  </Card>
-);
+const InfoCardComponent = ({ card }: { card: InfoCard }) => {
+  const linkProps = card.isExternal 
+    ? { target: "_blank", rel: "noopener noreferrer" } 
+    : {};
+
+  return (
+    <Card className="w-full bg-white dark:bg-blue-950">
+      <CardHeader className="p-0">
+        <div className="relative w-full h-48">
+          <Image
+            src={card.imageUrl}
+            alt={card.imageAlt}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
+          />
+        </div>
+      </CardHeader>
+      <CardBody>
+        <h2 className="text-2xl font-bold">{card.title}</h2>
+      </CardBody>
+      <CardFooter className="flex justify-end">
+        <Button
+          as={Link}
+          href={card.ctaUrl}
+          color="primary"
+          {...linkProps}
+        >
+          Daugiau
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};
 
 const VideoCardComponent = ({ card }: { card: VideoCard }) => {
   const [showVideo, setShowVideo] = useState(false);
