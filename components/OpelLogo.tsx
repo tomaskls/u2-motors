@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
@@ -12,9 +12,19 @@ export interface U2LogoMainProps {
 export const OpelLogo: FC<U2LogoMainProps> = ({
   className,
 }) => {
-  const { resolvedTheme } = useTheme();
-  
-  const isSelected = resolvedTheme === "light";
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Render placeholder iki kol neužsikrovė
+  if (!mounted) {
+    return <div className={clsx("w-16 h-10 relative", className)} />;
+  }
+
+  const isSelected = theme === "light";
 
   return (
     <div
