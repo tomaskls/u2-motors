@@ -3,7 +3,6 @@ import React from "react";
 import { FC } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
 
 export interface U2LogoMainProps {
@@ -13,11 +12,9 @@ export interface U2LogoMainProps {
 export const OpelLogo: FC<U2LogoMainProps> = ({
   className,
 }) => {
-  const { theme } = useTheme();
-  const isSSR = useIsSSR();
+  const { resolvedTheme } = useTheme();
   
-  // Naudojame tą pačią logiką kaip ThemeSwitch
-  const isSelected = theme === "light" || isSSR;
+  const isSelected = resolvedTheme === "light";
 
   return (
     <div
