@@ -21,7 +21,7 @@ export const cardsData: CardItem[] = [
   {
     id: "3",
     variant: "info",
-    imageUrl: "/images/2022-07-18.jpg",
+    imageUrl: "/images/u2_autoservisas.webp",
     imageAlt: "Trečia kortelė",
     title: "Servisas",
     ctaUrl: "/servisas",
