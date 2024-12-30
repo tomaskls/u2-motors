@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
+import { useIsSSR } from "@react-aria/ssr";
 import clsx from "clsx";
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 
@@ -16,18 +17,13 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   className,
   classNames,
 }) => {
-  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const isSSR = useIsSSR();
 
   const onChange = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  // useSwitch hook'ą iškviečiame visada, net ir prieš mounted patikrinimą
   const {
     Component,
     slots,
@@ -36,15 +32,10 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     getInputProps,
     getWrapperProps,
   } = useSwitch({
-    isSelected: theme === "light",
-    "aria-label": `Switch to ${theme === "light" ? "dark" : "light"} mode`,
+    isSelected: theme === "light" || isSSR,
+    "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
     onChange,
   });
-
-  // Render placeholder iki kol neužsikrovė
-  if (!mounted) {
-    return <div className="w-10 h-10" />;
-  }
 
   return (
     <Component
@@ -78,7 +69,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
           ),
         })}
       >
-        {!isSelected ? (
+        {!isSelected || isSSR ? (
           <SunFilledIcon size={22} />
         ) : (
           <MoonFilledIcon size={22} />
