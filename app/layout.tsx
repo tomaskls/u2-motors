@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
 
@@ -63,6 +64,7 @@ export default function RootLayout({
             <main className=" flex-grow">
               {children}
             </main>
+            <GoogleAnalytics gaId="G-CTZSL5Z8M" />
             <footer>
               <Footer />
             </footer>
