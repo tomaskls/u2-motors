@@ -7,6 +7,7 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
 
@@ -69,6 +70,7 @@ export default function RootLayout({
               <Footer />
             </footer>
           </div>
+          <CookieConsent />
         </Providers>
       </body>
     </html>
