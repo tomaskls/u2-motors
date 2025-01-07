@@ -65,7 +65,7 @@ export default function RootLayout({
             <main className=" flex-grow">
               {children}
             </main>
-            <GoogleAnalytics gaId="G-CTZSL5Z8M" />
+            <GoogleAnalytics gaId="G-CTZSL5TZ8M" />
             <footer>
               <Footer />
             </footer>
