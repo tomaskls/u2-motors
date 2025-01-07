@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import CldImageWrapper from "@/components/CldImageWrapper";
 import RegistrationPage from "@/components/RegistrationPage";
 
 export default function ServicePage() {
@@ -8,18 +8,18 @@ export default function ServicePage() {
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
         <div className="space-y-6">
           <div className="relative aspect-video max-w-md rounded-lg overflow-hidden mb-14">
-            <Image
-              src="/images/u2_autoservisas.webp"
-              alt="Autocentras"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            <CldImageWrapper
+              src="u2_autoservisas_kcrlql"
+              width={800}
+              height={450}
+              alt="Opel Autocentras"
               className="object-cover"
             />
           </div>
           <div className="prose dark:prose-invert max-w-none">
             <h2 className="text-2xl font-bold mb-4">MINAUTA, UAB (U2 Motors)</h2>
             <p className="mb-3">
-              MINAUTA, UAB yra oficialus„Opel” atstovas.
+              MINAUTA, UAB yra oficialus„Opel&quot; atstovas.
             </p>
             <p className="mb-3">
               Įmonė dirba pagal gamintojo keliamus reikalavimus ir standartus automobilių bei atsarginių dalių ir aksesuarų prekybai, automobilių priežiūros bei serviso paslaugoms.
