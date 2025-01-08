@@ -1,31 +1,31 @@
 export const CAROUSEL_IMAGES = [
   {
     desktop: {
-      src: "/images/GrandlandGoGrand_2880x1235_LIT.avif",
+      src: "GrandlandGoGrand_2880x1235_LIT_okyujd",
       alt: "First image",
     },
     mobile: {
-      src: "/images/GrandlandGoGrand_750x1680_LIT.avif",
+      src: "GrandlandGoGrand_750x1680_LIT_esya63",
       alt: "First image",
     },
   },
   {
     desktop: {
-      src: "/images/LCV_21x9_LIT.avif",
+      src: "LCV_21x9_LIT_dbhlfz",
       alt: "Second image",
     },
     mobile: {
-      src: "/images/LCV_750x1680_LIT.avif",
+      src: "LCV_750x1680_LIT_fft2ic",
       alt: "Second image",
     },
   },
   {
     desktop: {
-      src: "/images/Zafira_21x9_LIT.avif",
+      src: "Zafira_21x9_LIT_ape934",
       alt: "Third image",
     },
     mobile: {
-      src: "/images/AstraST_750x1680_LIT.avif",
+      src: "AstraST_750x1680_LIT_hameoq",
       alt: "Third image",
     },
   },

@@ -40,7 +40,7 @@ The website is built using modern tools and technologies:
 Tomas: [Github](https://github.com/tomaskls/)
 
 ## License
-This project is the property of the author and cannot be used, copied, modified, or distributed without the explicit written permission of the author. All rights reserved.
+This project is the property of the author and cannot be used, copied, modified, or distributed without the explicit written permission of the author. All rights reserved
 
 ## Contact
 [Contact information for support and inquiries]

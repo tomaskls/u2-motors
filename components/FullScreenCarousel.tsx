@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { Button } from "@nextui-org/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -29,16 +29,13 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
 
   const minSwipeDistance = 50;
 
-  // Ekrano dydžio stebėjimas
   React.useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    // Pradinis patikrinimas
     checkMobile();
 
-    // Stebėjimas resize evento
     window.addEventListener('resize', checkMobile);
 
     return () => {
@@ -46,7 +43,6 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
     };
   }, []);
 
-  // Automatinis keitimas
   React.useEffect(() => {
     const startAutoPlay = () => {
       autoPlayInterval.current = setInterval(() => {
@@ -154,7 +150,7 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
       tabIndex={0}
     >
       <div className="absolute inset-0">
-        <Image
+        <CldImage
           src={currentImage.src}
           alt={currentImage.alt}
           fill
@@ -193,8 +189,9 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 rounded-full transition-all touch-manipulation ${index === currentIndex ? "bg-white w-4" : "bg-white/50"
-              }`}
+            className={`w-2 h-2 rounded-full transition-all touch-manipulation ${
+              index === currentIndex ? "bg-white w-4" : "bg-white/50"
+            }`}
             onClick={() => handleDotClick(index)}
             onTouchEnd={(e) => {
               e.stopPropagation();
