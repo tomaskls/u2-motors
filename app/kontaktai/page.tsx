@@ -13,7 +13,7 @@ export default function ContactPage() {
           <Card className="bg-white dark:bg-blue-900 p-0 hidden lg:block">
             <div className="relative aspect-square w-full">
               <Image
-                src="/images/2022-07-18.jpg"
+                src="/images/u2_autoservisas.webp"
                 alt="Autocentras"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

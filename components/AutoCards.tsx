@@ -36,7 +36,7 @@ const AutoCards = ({ cards }: InfoCardsProps) => {
                         </div>
                     </CardHeader>
                     <CardBody>
-                        <h2 className="text-2xl font-bold">{card.title}</h2>
+                        <h2 className="text-2xl font-bold mt-3">{card.title}</h2>
                     </CardBody>
                     <CardFooter className="flex justify-end">
                         <Button
