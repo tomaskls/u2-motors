@@ -1,7 +1,7 @@
 export const CAROUSEL_IMAGES = [
   {
     desktop: {
-      src: "GrandlandGoGrand_2880x1235_LIT_okyujd",
+      src: "Grandland_FB_1080x1920_LIT_02_d5alzi",
       alt: "First image",
     },
     mobile: {
