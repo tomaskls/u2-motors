@@ -25,7 +25,7 @@ export const CAROUSEL_IMAGES = [
       alt: "Third image",
     },
     mobile: {
-      src: "AstraST_750x1680_LIT_hameoq",
+      src: "Mokka_FB_1080x1920_LIT_bm2c8f",
       alt: "Third image",
     },
   },
