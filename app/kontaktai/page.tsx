@@ -10,7 +10,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-bold mb-8">Mūsų kontaktai</h1>
       <div className="grid lg:grid-cols-2 gap-6 lg:gap-24">
         <div className="grid gap-6 order-2 lg:order-1">
-          <Card className="bg-white dark:bg-blue-900 p-0 hidden lg:block">
+          <Card key="main-image" className="bg-white dark:bg-blue-900 p-0 hidden lg:block">
             <div className="relative aspect-square w-full">
               <Image
                 src="/images/u2_autoservisas.webp"
@@ -21,7 +21,18 @@ export default function ContactPage() {
               />
             </div>
           </Card>
-          <ClientGoogleMap />
+          <Card key="eu-image" className="bg-white dark:bg-blue-900 p-0">
+            <div className="relative aspect-square w-full">
+              <Image
+                src="/images/eu.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+          </Card>
+          <ClientGoogleMap key="google-map" />
         </div>
         <div className="grid gap-6 order-1 lg:order-2">
           {contactSections.map((section, index) => (
