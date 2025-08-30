@@ -37,7 +37,7 @@ export const OpelLogo: FC<U2LogoMainProps> = ({
         />
       ) : (
         <Image
-          src="public/logo/OPEL-EMBLEM-2023-VERTICAL-BLACK-RGB.svg"
+          src="logo/OPEL-EMBLEM-2023-VERTICAL-BLACK-RGB.svg"
           alt="Opel Logo"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
