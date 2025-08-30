@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   authors: [{ name: "U2 Motors" }],
   creator: "U2 Motors",
   icons: {
-    icon: "/OPEL-EMBLEM-2023-VERTICAL-BLACK-RGB.svg",
+    icon: "logo/OPEL-EMBLEM-2023-VERTICAL-BLACK-RGB.svg",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
