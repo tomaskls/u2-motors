@@ -5,7 +5,7 @@ export const CAROUSEL_IMAGES = [
       alt: "First image",
     },
     mobile: {
-      src: "GrandlandGoGrand_750x1680_LIT_esya63",
+      src: "Grandland_FB_1080x1920_LIT_02_d5alzi",
       alt: "First image",
     },
   },
