@@ -1,7 +1,7 @@
 export const CAROUSEL_IMAGES = [
   {
     desktop: {
-      src: "viber_image_2025-11-18_12-09-59-316_oghqbg",
+      src: "viber_image_2025-11-18_12-09-14-312_qvpmxv",
       alt: "First image",
     },
     mobile: {
