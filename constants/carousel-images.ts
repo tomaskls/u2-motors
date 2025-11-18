@@ -1,7 +1,7 @@
 export const CAROUSEL_IMAGES = [
   {
     desktop: {
-      src: "Grandland_FB_1080x1920_LIT_02_d5alzi",
+      src: "viber_image_2025-11-18_12-09-14-312_qvpmxv",
       alt: "First image",
     },
     mobile: {
@@ -11,7 +11,7 @@ export const CAROUSEL_IMAGES = [
   },
   {
     desktop: {
-      src: "LCV_21x9_LIT_dbhlfz",
+      src: "viber_image_2025-11-18_12-09-59-316_oghqbg",
       alt: "Second image",
     },
     mobile: {
