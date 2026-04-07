@@ -29,6 +29,7 @@ export const siteConfig: SiteConfig = {
       isExternal: true,
     },
     { label: "Servisas", href: "/servisas" },
+    { label: "E-Parduotuvė", href: "https://odalys.lt/", isExternal: true },
     { label: "Kontaktai", href: "kontaktai" },
   ],
 
@@ -46,6 +47,7 @@ export const siteConfig: SiteConfig = {
       isExternal: true,
     },
     { label: "Servisas", href: "/servisas" },
+    { label: "E-Parduotuvė", href: "https://odalys.lt/", isExternal: true },
     { label: "Kontaktai", href: "kontaktai" },
   ],
   links: {

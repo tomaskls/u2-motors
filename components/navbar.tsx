@@ -68,7 +68,7 @@ export const Navbar = () => {
 
       <NavbarContent className="lg:hidden basis-1 mr-1 pl-4" justify="end">
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle className="text-default-900" />
       </NavbarContent>
 
       <NavbarMenu>
