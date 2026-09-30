@@ -29,8 +29,8 @@ const AutoCards = ({ cards }: InfoCardsProps) => {
                             <Image
                                 src={card.imageUrl}
                                 alt={card.imageAlt}
-                                width={576}
-                                height={324}
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="object-cover"
                             />
                         </div>

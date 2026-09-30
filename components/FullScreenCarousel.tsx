@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { CldImage } from "next-cloudinary";
+import { getCldImageUrl } from "next-cloudinary";
 import { Button } from "@nextui-org/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -19,29 +19,20 @@ interface FullScreenCarouselProps {
   images: CarouselImage[];
 }
 
+const cldUrl = (src: string, width: number) =>
+  getCldImageUrl({ src, width, quality: 85, format: "auto" });
+
+const buildSrcSet = (src: string, widths: number[]) =>
+  widths.map((w) => `${cldUrl(src, w)} ${w}w`).join(", ");
+
 const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [touchStart, setTouchStart] = React.useState<number | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
   const [isPaused, setIsPaused] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
   const autoPlayInterval = React.useRef<NodeJS.Timeout | null>(null);
 
   const minSwipeDistance = 50;
-
-  React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, []);
 
   React.useEffect(() => {
     const startAutoPlay = () => {
@@ -136,7 +127,7 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
 
   if (!images || images.length === 0) return null;
 
-  const currentImage = isMobile ? images[currentIndex].mobile : images[currentIndex].desktop;
+  const currentImage = images[currentIndex];
 
   return (
     <div
@@ -150,16 +141,23 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
       tabIndex={0}
     >
       <div className="absolute inset-0">
-        <CldImage
-          src={currentImage.src}
-          alt={currentImage.alt}
-          fill
-          className="object-contain"
-          priority
-          sizes="100vw"
-          quality={85}
-          draggable={false}
-        />
+        {/* <picture> leidžia naršyklei iš karto pasirinkti mobilią ar desktop nuotrauką */}
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcSet={buildSrcSet(currentImage.mobile.src, [640, 1080])}
+            sizes="100vw"
+          />
+          <img
+            src={cldUrl(currentImage.desktop.src, 1920)}
+            srcSet={buildSrcSet(currentImage.desktop.src, [1280, 1920, 2560])}
+            sizes="100vw"
+            alt={currentImage.desktop.alt}
+            className="w-full h-full object-contain"
+            {...{ fetchpriority: "high" }}
+            draggable={false}
+          />
+        </picture>
       </div>
 
       <div className="absolute inset-0 flex items-center justify-between p-4">
