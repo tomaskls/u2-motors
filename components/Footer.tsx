@@ -14,7 +14,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="border-t border-gray-200 dark:border-gray-700 pt-3 text-sm text-gray-600 dark:text-gray-400">
-          <p>Sukurta <Link href="https://www.tmh.lt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tomorrow&apos;s Media House</Link>. © 2024 UAB &quot;Minauta&quot;. Visos teisės saugomos.</p>
+          <p>Sukurta <Link href="https://www.tmh.lt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tomorrow&apos;s Media House</Link>. © {new Date().getFullYear()} UAB &quot;Minauta&quot;. Visos teisės saugomos.</p>
         </div>
       </div>
     </footer>

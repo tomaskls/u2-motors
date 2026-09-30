@@ -19,24 +19,24 @@ export default function ServicePage() {
           <div className="prose dark:prose-invert max-w-none">
             <h2 className="text-2xl font-bold mb-4">MINAUTA, UAB (U2 Motors)</h2>
             <p className="mb-3">
-              MINAUTA, UAB yra oficialus„Opel&quot; atstovas.
+              MINAUTA, UAB yra oficialus „Opel“ atstovas.
             </p>
             <p className="mb-3">
               Įmonė dirba pagal gamintojo keliamus reikalavimus ir standartus automobilių bei atsarginių dalių ir aksesuarų prekybai, automobilių priežiūros bei serviso paslaugoms.
             </p>
             <p className="mb-3">
-              Serviso kolektyvas - profesionalūs autoremontininkai, vadybininkai - savo srities specialistai, operatyviai sprendžiantys iškilusias klientų autotransporto priemonių problemas.Remonto darbai atliekami po išsamios techninio gedimo situacijos analizės.
+              Serviso kolektyvas - profesionalūs autoremontininkai, vadybininkai - savo srities specialistai, operatyviai sprendžiantys iškilusias klientų autotransporto priemonių problemas. Remonto darbai atliekami po išsamios techninio gedimo situacijos analizės.
             </p>
             <p className="mb-3">
-              Mūsų autoservise laikomasi „kaina - kokybė&quot; aptarnavimo standarto. Esame tam, kad rastume alternatyvius ir patikimus sprendimo būdus!
+              Mūsų autoservise laikomasi „kaina – kokybė“ aptarnavimo standarto. Esame tam, kad rastume alternatyvius ir patikimus sprendimo būdus!
             </p>
+            <h3 className="text-xl font-bold mt-6 mb-3">Vertybės</h3>
             <p className="mb-3">
-              Vertybės (galima šiuos pabrėžti)
-              Taktiškas ir pagarbus klientų aptarnavimas
+              <strong>Taktiškas ir pagarbus klientų aptarnavimas.</strong>{" "}
               Siekiame maksimaliai patenkinti kliento poreikius.
             </p>
             <p className="mb-3">
-              Pasitikėjimas ir sąžiningumas
+              <strong>Pasitikėjimas ir sąžiningumas.</strong>{" "}
               Kuriame ryšius su klientais ir partneriais, grįstus korektiškumu, skaidrumu ir pagarba.
             </p>
           </div>

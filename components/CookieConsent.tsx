@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
 interface ConsentPreferences {
@@ -16,14 +15,27 @@ export default function CookieConsent() {
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
-    const hasConsent = localStorage.getItem('cookieConsent');
+    let hasConsent: string | null = null;
+    try {
+      hasConsent = localStorage.getItem('cookieConsent');
+    } catch {
+      // localStorage nepasiekiamas (pvz., užblokuoti slapukai)
+    }
     if (!hasConsent) {
       setShowConsent(true);
     }
   }, []);
 
+  const saveChoice = (choice: string) => {
+    try {
+      localStorage.setItem('cookieConsent', choice);
+    } catch {
+      // pasirinkimas galios tik šiam apsilankymui
+    }
+  };
+
   const updateConsent = (preferences: ConsentPreferences) => {
-    window.gtag('consent', 'update', preferences);
+    window.gtag?.('consent', 'update', preferences);
   };
 
   const handleAcceptAll = () => {
@@ -34,7 +46,7 @@ export default function CookieConsent() {
       ad_personalization: 'granted'
     };
     updateConsent(preferences);
-    localStorage.setItem('cookieConsent', 'all');
+    saveChoice('all');
     setShowConsent(false);
   };
 
@@ -46,7 +58,7 @@ export default function CookieConsent() {
       ad_personalization: 'denied'
     };
     updateConsent(preferences);
-    localStorage.setItem('cookieConsent', 'analytics');
+    saveChoice('analytics');
     setShowConsent(false);
   };
 
@@ -58,7 +70,7 @@ export default function CookieConsent() {
       ad_personalization: 'denied'
     };
     updateConsent(preferences);
-    localStorage.setItem('cookieConsent', 'declined');
+    saveChoice('declined');
     setShowConsent(false);
   };
 
@@ -66,19 +78,6 @@ export default function CookieConsent() {
 
   return (
     <>
-      <Script id="gtm-consent" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied'
-          });
-        `}
-      </Script>
-
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-100 border-t border-gray-200">
         <div className="max-w-7xl mx-auto p-4">
           {!showDetails ? (
@@ -175,4 +174,4 @@ export default function CookieConsent() {
       </div>
     </>
   );
-}
+}

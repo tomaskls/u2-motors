@@ -1,4 +1,10 @@
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontaktai",
+  description: "U2 Motors kontaktai: salonas, autoservisas, dalys ir aksesuarai. Serbentų g. 55, Šiauliai.",
+};
 
 export default function ContactLayout({
   children,

@@ -1,4 +1,10 @@
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Registracija į servisą",
+  description: "Registruokitės į oficialų Opel autoservisą Šiauliuose telefonu arba internetu.",
+};
 
 export default function RegLayout({
   children,

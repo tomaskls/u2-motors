@@ -8,7 +8,10 @@ import nextPlugin from "@next/eslint-plugin-next";
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+  },
+  {
     ignores: [
+      "next-env.d.ts",
       ".now/*",
       "*.css",
       ".changeset",
@@ -35,6 +38,7 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  { settings: { react: { version: "detect" } } },
   {
     plugins: {
       "@next/next": nextPlugin

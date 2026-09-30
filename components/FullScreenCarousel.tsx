@@ -167,7 +167,8 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
           isIconOnly
           className="bg-black/50 text-white hover:bg-black/70 sm:w-12 sm:h-12 w-8 h-8 touch-manipulation"
           onClick={handlePrevious}
-          onTouchEnd={handlePrevious}
+          onTouchStart={(e) => e.stopPropagation()}
+          onTouchEnd={(e) => e.stopPropagation()}
           size="lg"
           aria-label="Previous image"
         >
@@ -178,7 +179,8 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
           isIconOnly
           className="bg-black/50 text-white hover:bg-black/70 sm:w-12 sm:h-12 w-8 h-8 touch-manipulation"
           onClick={handleNext}
-          onTouchEnd={handleNext}
+          onTouchStart={(e) => e.stopPropagation()}
+          onTouchEnd={(e) => e.stopPropagation()}
           size="lg"
           aria-label="Next image"
         >
@@ -193,10 +195,8 @@ const FullScreenCarousel = ({ images }: FullScreenCarouselProps) => {
               index === currentIndex ? "bg-white w-4" : "bg-white/50"
             }`}
             onClick={() => handleDotClick(index)}
-            onTouchEnd={(e) => {
-              e.stopPropagation();
-              handleDotClick(index);
-            }}
+            onTouchStart={(e) => e.stopPropagation()}
+            onTouchEnd={(e) => e.stopPropagation()}
             aria-label={`Go to image ${index + 1}`}
           />
         ))}

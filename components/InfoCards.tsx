@@ -101,17 +101,7 @@ const MixedCards = ({ cards }: MixedCardsProps) => {
 
   return (
     <div className="container mx-auto">
-      {/* Desktop Layout */}
-      <div className="hidden lg:grid grid-cols-3 gap-8 p-4 mb-16">
-        {cards.map((card) => (
-          <div key={card.id}>
-            {renderCard(card)}
-          </div>
-        ))}
-      </div>
-
-      {/* Mobile Layout */}
-      <div className="lg:hidden flex flex-col gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:p-4 mb-16">
         {cards.map((card) => (
           <div key={card.id}>
             {renderCard(card)}
